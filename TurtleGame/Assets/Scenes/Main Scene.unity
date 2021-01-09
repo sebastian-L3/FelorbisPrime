@@ -3508,7 +3508,7 @@ Transform:
   m_Children:
   - {fileID: 633498390}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &133574124
 GameObject:
@@ -9389,7 +9389,7 @@ Transform:
   - {fileID: 270355212}
   - {fileID: 1586748394}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406758212
 GameObject:
@@ -38974,7 +38974,7 @@ Transform:
   - {fileID: 1494838802}
   - {fileID: 151199817}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804387921
 GameObject:
@@ -39007,7 +39007,7 @@ Transform:
   - {fileID: 1896917479}
   - {fileID: 1192405883}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1805320163
 PrefabInstance:
@@ -46196,21 +46196,6 @@ MonoBehaviour:
   currentCharacter: {fileID: 2342457100665447637}
   CM: {fileID: 132045324}
   manager: {fileID: 562105939}
-  jumpForce: 30
-  crouchSpeed: 0.36
-  movementSmoothing: 0.05
-  moveSpeed: 40
-  floatVelocity: 5
-  ladderMS: 20
-  fallMultiplier: 1
-  lowJumpMultiplier: 2
-  airControlModifier: 0.85
-  slowingAir: 0.5
-  airTime: 1
-  airTimeCount: 0
-  shellMultiplier: 1.75
-  tMoveSpeed: 0
-  currentFloat: 0
   gravity: 0
   facingR: 1
   crouch: 0
@@ -46218,35 +46203,32 @@ MonoBehaviour:
   canJump: 0
   isLadder: 0
   isJumping: 0
+  wasCrouching: 0
   swimAnimationStop: 1
-  jumpTime: 0.25
+  tempGrounded: 0
+  jumpleftDecreaseStopper: 1
+  jumpButtonPressed: 0
+  rVelocity: {x: 0, y: 0, z: 0}
+  tMoveSpeed: 0
+  currentFloat: 0
   jumpTimeCounter: 0
-  flipTime: 0.25
-  flipTimeCounter: 0
-  springTime: 0.25
   springTimeCounter: 0
-  houseInteractBuffer: 0
-  jumpLimit: 1
   jumpLeft: 0
   slideTime: 1.3
   slideTimeCounter: 0
   slideDecay: 0.5
   slideDecayCounter: 0
-  shellThrowBuffer: 0.2
   shellThrowBufferCounter: 0
-  shellSummon: 1
   shellSummonCounter: 0
   isSliding: 0
   facingSlide: 0
   SlideVelocity: {x: 0, y: 0}
   slideDashCooldown: 1.5
   slideDashCooldownCounter: 0
-  slideDashSpeed: 80
   ShellObject: {fileID: 1896917478}
   rbShell: {fileID: 1896917480}
   ShellOnBack: {fileID: 462411707840525882}
   ShellOnBackClimbing: {fileID: 1864141405}
-  summonAmmoMax: 1
   summonAmmoCount: 1
 --- !u!114 &263253032507518961
 MonoBehaviour:
@@ -48713,7 +48695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7318808903588367422, guid: 75f4aa63d9441f041a653723299e0aba, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7318808903588367422, guid: 75f4aa63d9441f041a653723299e0aba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -49323,6 +49305,14 @@ PrefabInstance:
       propertyPath: mineAn
       value: 
       objectReference: {fileID: 262659633}
+    - target: {fileID: 5018205625638811605, guid: b0edae5ba514407448e2d8dd31552da3, type: 3}
+      propertyPath: gravity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018205625638811605, guid: b0edae5ba514407448e2d8dd31552da3, type: 3}
+      propertyPath: airControl
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8724143918720934686, guid: b0edae5ba514407448e2d8dd31552da3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -517
@@ -49920,7 +49910,7 @@ Transform:
   - {fileID: 1087933522}
   - {fileID: 761750311}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7336448358103788898
 GameObject:

@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class GrMovement : GeneralMovement
 {
-    public float slowingSwim = 1.5f;
-    
+    protected float slowingSwim = 1.5f;
 
-    public float mineThrowSpeed = 20f;
-    public float mineSpeed = 40f;
+    protected float mineThrowSpeed = 20f;
+    protected float mineSpeed = 40f;
 
-    public float mineJumpTime = 2f;
-    public float mineJumpTimeCounter = 0f;
+    protected float mineJumpTime = 2f;
+    [SerializeField]
+    protected float mineJumpTimeCounter = 0f;
 
-    public float mineThrowBuffer = 0.2f;
-    public float mineThrowBufferCounter = 0f;
+    protected float mineThrowBuffer = 0.2f;
+    [SerializeField]
+    protected float mineThrowBufferCounter = 0f;
 
     public float mineThrowCooldown = 3f;
     public float mineThrowBCooldownCounter = 0f;
@@ -23,24 +24,33 @@ public class GrMovement : GeneralMovement
     public int skillAmmoMax = 5;
     public int skillAmmoCount = 5;
 
-    float xDist;
-    float yDist;
-    public float mineXDist;
+    [SerializeField]
+    protected float xDist;
+    [SerializeField]
+    protected float yDist;
+    [SerializeField]
+    protected float mineXDist;
 
-    public bool isExploding = false;
+    [SerializeField]
+    protected bool isExploding = false;
 
-    public GameObject MinesParentObject;
-    public GameObject MinesObject;
-    public Rigidbody2D rbMines;
-    public Animator mineAn;
+    [SerializeField]
+    protected GameObject MinesParentObject;
+    [SerializeField]
+    protected GameObject MinesObject;
+    [SerializeField]
+    protected Rigidbody2D rbMines;
+    [SerializeField]
+    protected Animator mineAn;
 
     protected override void Start()
     {
         envi = GetComponent<GrEnviroment>();
         anScript = GetComponent<GrAnimation>();
-
         //value
-        gravity = rb.gravityScale;
+        jumpLimit = 2;
+        slowingSwim = 1.5f;
+        slowingAir = 0.75f;
     }
 
     // Update is called once per frame

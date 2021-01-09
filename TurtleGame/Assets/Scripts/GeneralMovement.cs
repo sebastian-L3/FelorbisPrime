@@ -5,72 +5,95 @@ using Cinemachine;
 
 public class GeneralMovement : MonoBehaviour
 {
-
-    public Collider2D crouchDisableCollider;
-    public Collider2D crouchEnableCollider;
-    public Rigidbody2D rb;
-    public GeneralEnviroment envi;
-    public GeneralAnimation anScript;
-    public GameObject otherCharacter;
-    public GameObject currentCharacter;
-    public CinemachineVirtualCamera CM;
-    public GameManager manager;
+    [SerializeField]
+    protected Collider2D crouchDisableCollider;
+    [SerializeField]
+    protected Collider2D crouchEnableCollider;
+    [SerializeField]
+    protected Rigidbody2D rb;
+    [SerializeField]
+    protected GeneralEnviroment envi;
+    [SerializeField]
+    protected GeneralAnimation anScript;
+    [SerializeField]
+    protected GameObject otherCharacter;
+    [SerializeField]
+    protected GameObject currentCharacter;
+    [SerializeField]
+    protected CinemachineVirtualCamera CM;
+    [SerializeField]
+    protected GameManager manager;
 
 
 
     //Speed
-    public float jumpForce = 30f;
-    public float crouchSpeed = .36f;
-    public float movementSmoothing = .05f;
-    public float moveSpeed = 40f;
-    public float floatVelocity = 5.0f;
-    public float ladderMS = 40.0f;
-    public float fallMultiplier = 1f;
-    public float lowJumpMultiplier = 2f;
-    public float airControlModifier = 0.85f;
+    protected float jumpForce = 30f;
+    protected float crouchSpeed = .36f;
+    protected float movementSmoothing = .05f;
+    protected float moveSpeed = 40f;
+    protected float floatVelocity = 5.0f;
+    protected float ladderMS = 20f;
+    protected float fallMultiplier = 1f;
+    protected float lowJumpMultiplier = 2f;
+    protected float airControlModifier = 0.85f;
 
-    public float slowingAir = 1.5f;
-    public float airTime = 1f;
-    public float airTimeCount = 0f;
-    public float shellMultiplier = 2f;
-
-    // temporary Speed
-    private Vector3 rVelocity = Vector3.zero;
-    public float tMoveSpeed = 0f;
-    public float currentFloat = 0f;
-
+    protected float slowingAir = 0.5f;
+    protected float airTime = 1f;
+    protected float airTimeCount = 0f;
+    protected float shellMultiplier = 1.75f;
 
     //temporary value
     private float movementInputDirection;
-    public float gravity;
+    [SerializeField]
+    protected float gravity;
 
     //bools
-    public bool facingR = true;
-    public bool crouch;
-    public bool airControl = true;
-    public bool canJump;
-    public bool isLadder;
-    public bool isJumping = false;
+    [SerializeField]
+    protected bool facingR = true;
+    [SerializeField]
+    protected bool crouch;
+    [SerializeField]
+    protected bool airControl = true;
+    [SerializeField]
+    protected bool canJump;
+    [SerializeField]
+    protected bool isLadder;
+    [SerializeField]
+    protected bool isJumping = false;
 
     //temporary bool
-    private bool wasCrouching = false;
-    public bool swimAnimationStop = true;
-    private bool tempGrounded;
-    private bool jumpleftDecreaseStopper = true;
-    private bool jumpButtonPressed =false;
+    [SerializeField]
+    protected bool wasCrouching = false;
+    [SerializeField]
+    protected bool swimAnimationStop = true;
+    [SerializeField]
+    protected bool tempGrounded;
+    [SerializeField]
+    protected bool jumpleftDecreaseStopper = true;
+    [SerializeField]
+    protected bool jumpButtonPressed =false;
+
+    // temporary Speed
+    [SerializeField]
+    protected Vector3 rVelocity = Vector3.zero;
+    [SerializeField]
+    protected float tMoveSpeed = 0f;
+    [SerializeField]
+    protected float currentFloat = 0f;
 
     //Timers
-    public float jumpTime = 0.25f;
-    public float jumpTimeCounter;
-    public float flipTime = 0.25f;
-    public float flipTimeCounter = 0;
-    public float springTime = 0.25f;
-    public float springTimeCounter = 0;
-    public float houseInteractBuffer = 0;
+    protected float jumpTime = 0.25f;
+    [SerializeField]
+    protected float jumpTimeCounter;
+    protected float springTime = 0.25f;
+    [SerializeField]
+    protected float springTimeCounter = 0;
+    protected float houseInteractBuffer = 0;
 
     //limiters
-    public int jumpLimit = 1;
-    public int jumpLeft;
+    protected int jumpLimit = 1;
+    [SerializeField]
+    protected int jumpLeft;
 
 
 
@@ -342,9 +365,8 @@ public class GeneralMovement : MonoBehaviour
                 if (!isJumping && canJump)
                 {
                     jumpButtonPressed = true;
-
                     isJumping = true;
-                    anScript.AnimationSet("Jump");
+                    if(!envi.isNearLadder)anScript.AnimationSet("Jump");
                     jumpTimeCounter = jumpTime;
                 }
                 if (jumpTimeCounter > 0 && isJumping)

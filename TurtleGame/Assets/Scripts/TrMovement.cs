@@ -5,33 +5,46 @@ using UnityEngine;
 public class TrMovement : GeneralMovement
 {
     //timers
-    public float slideTime = 0.5f;
-    public float slideTimeCounter;
-    public float slideDecay = 1f;
-    public float slideDecayCounter;
+    [SerializeField]
+    protected float slideTime = 1.3f;
+    [SerializeField]
+    protected float slideTimeCounter;
+    [SerializeField]
+    protected float slideDecay = 0.5f;
+    [SerializeField]
+    protected float slideDecayCounter;
 
-    public float shellThrowBuffer = 0.2f;
-    public float shellThrowBufferCounter = 0f;
-    public float shellSummon = 1f;
-    public float shellSummonCounter = 0f;
+    protected float shellThrowBuffer = 0.2f;
+    [SerializeField]
+    protected float shellThrowBufferCounter = 0f;
+    protected float shellSummon = 1f;
+    [SerializeField]
+    protected float shellSummonCounter = 0f;
 
-    public bool isSliding = false;
-    public bool facingSlide;
+    [SerializeField]
+    protected bool isSliding = false;
+    [SerializeField]
+    protected bool facingSlide;
 
-    public Vector2 SlideVelocity;
+    [SerializeField]
+    protected Vector2 SlideVelocity;
 
     public float slideDashCooldown = 3f;
     public float slideDashCooldownCounter = 0f;
 
-    public float slideDashSpeed = 80f;
+    protected float slideDashSpeed = 80f;
 
-    public GameObject ShellObject;
-    public Rigidbody2D rbShell;
+    [SerializeField]
+    protected GameObject ShellObject;
+    [SerializeField]
+    protected Rigidbody2D rbShell;
 
-    public GameObject ShellOnBack;
-    public GameObject ShellOnBackClimbing;
+    [SerializeField]
+    protected GameObject ShellOnBack;
+    [SerializeField]
+    protected GameObject ShellOnBackClimbing;
 
-    public int summonAmmoMax = 1;
+    protected int summonAmmoMax = 1;
     public int summonAmmoCount = 1;
 
 
@@ -74,6 +87,20 @@ public class TrMovement : GeneralMovement
         }
     }
 
+    protected override void SpringEffect()
+    {
+        if (envi.isSpring)
+        {
+            springTimeCounter = springTime;
+        }
+        if (springTimeCounter > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
+            springTimeCounter -= Time.deltaTime;
+            if(!isSliding)anScript.AnimationSet("Jump");
+        }
+    }
+
     protected override void FloatingWaterEffect()
     {
         if (envi.isFloating)
@@ -99,20 +126,6 @@ public class TrMovement : GeneralMovement
     public override void RefreshOrb()
     {
         summonAmmoCount = summonAmmoMax;
-    }
-
-    protected override void SpringEffect()
-    {
-        if (envi.isSpring)
-        {
-            springTimeCounter = springTime;
-        }
-        if (springTimeCounter > 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
-            springTimeCounter -= Time.deltaTime;
-            if(!isSliding)anScript.AnimationSet("Jump");
-        }
     }
 
     void specificMovements()
