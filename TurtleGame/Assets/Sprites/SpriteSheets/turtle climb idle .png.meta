@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 4fa62991b4ec1ba4391e3e38d4627130
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2568260017623906367
+    second: turtle climb idle _0
+  - first:
+      213: 4079302088421324145
+    second: turtle climb idle _1
+  - first:
+      213: 8747517429116151040
+    second: turtle climb idle _2
+  - first:
+      213: 1760433714187125730
+    second: turtle climb idle _3
+  - first:
+      213: -7619715431661243058
+    second: turtle climb idle _4
+  - first:
+      213: -8585433058323630161
+    second: turtle climb idle _5
+  - first:
+      213: 4694040884443976943
+    second: turtle climb idle _6
+  - first:
+      213: 4343469033110742890
+    second: turtle climb idle _7
+  - first:
+      213: -5025675521930965758
+    second: turtle climb idle _8
+  - first:
+      213: -5072640137235522564
+    second: turtle climb idle _9
+  - first:
+      213: -5322639389451274426
+    second: turtle climb idle _10
+  - first:
+      213: 5387278772976397232
+    second: turtle climb idle _11
+  - first:
+      213: 5891948570275494305
+    second: turtle climb idle _12
+  - first:
+      213: 8998867544890424426
+    second: turtle climb idle _13
+  - first:
+      213: -1159626659307317456
+    second: turtle climb idle _14
+  - first:
+      213: -5277323599091759759
+    second: turtle climb idle _15
+  - first:
+      213: 7111323384880554453
+    second: turtle climb idle _16
+  - first:
+      213: -4297061210687623783
+    second: turtle climb idle _17
+  - first:
+      213: -6507905776197445933
+    second: turtle climb idle _18
+  - first:
+      213: 8002408236957255348
+    second: turtle climb idle _19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: turtle climb idle _0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1544
+        width: 361
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c740b60f15bb5cd0800000000000000
+      internalID: -2568260017623906367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _1
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1548
+        width: 361
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175bcd7e2a79c9830800000000000000
+      internalID: 4079302088421324145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _2
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 1548
+        width: 360
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005a10561cc656970800000000000000
+      internalID: 8747517429116151040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _3
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1546
+        width: 360
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3ceb8c2215e6810800000000000000
+      internalID: 1760433714187125730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _4
+      rect:
+        serializedVersion: 2
+        x: 2493
+        y: 1550
+        width: 361
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45f4469f25514690800000000000000
+      internalID: -7619715431661243058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _5
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 1556
+        width: 359
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa779bbfe1a6ad880800000000000000
+      internalID: -8585433058323630161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1005
+        width: 360
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe491767055942140800000000000000
+      internalID: 4694040884443976943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1007
+        width: 357
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67a97ba21a174c30800000000000000
+      internalID: 4343469033110742890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _8
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1003
+        width: 361
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dcdee6db6314ab0800000000000000
+      internalID: -5025675521930965758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _9
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1011
+        width: 361
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb10b2dbac5a99b0800000000000000
+      internalID: -5072640137235522564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _10
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 1017
+        width: 363
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64731440daf2226b0800000000000000
+      internalID: -5322639389451274426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _11
+      rect:
+        serializedVersion: 2
+        x: 3075
+        y: 1005
+        width: 365
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bba241408573ca40800000000000000
+      internalID: 5387278772976397232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 423
+        width: 365
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9342ef10864c150800000000000000
+      internalID: 5891948570275494305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _13
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 419
+        width: 366
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c3cf1aa5662ec70800000000000000
+      internalID: 8998867544890424426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _14
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 419
+        width: 367
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0371ae382bd28efe0800000000000000
+      internalID: -1159626659307317456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _15
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 421
+        width: 367
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1758957a52e23c6b0800000000000000
+      internalID: -5277323599091759759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _16
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 421
+        width: 367
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1ebbee0fe70b260800000000000000
+      internalID: 7111323384880554453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _17
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 427
+        width: 365
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99daade7895cd54c0800000000000000
+      internalID: -4297061210687623783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _18
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 421
+        width: 365
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6d90a4d264fa5a0800000000000000
+      internalID: -6507905776197445933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle climb idle _19
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 423
+        width: 367
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b64f7794e34e0f60800000000000000
+      internalID: 8002408236957255348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

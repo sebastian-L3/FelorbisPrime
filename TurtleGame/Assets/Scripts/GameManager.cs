@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject tigerUI;
+
     [SerializeField]
     private TextMeshProUGUI skillAmountTxt;
 
