@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Music
+  - UI
+  - EventSystem
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - ladder
+  - Spring
+  - river water
+  - Background
+  - Player
+  - In-game obj
+  - SwitchHouse
+  - BirdZone
+  - Shellbox
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1403955159
+    locked: 0
+  - name: BGO1
+    uniqueID: 1201544583
+    locked: 0
+  - name: BGO2
+    uniqueID: 958517127
+    locked: 0
+  - name: BGO3
+    uniqueID: 2551690391
+    locked: 0
+  - name: BGO4
+    uniqueID: 1623937509
+    locked: 0
+  - name: BGO5
+    uniqueID: 2918805149
+    locked: 0
+  - name: Objects
+    uniqueID: 4056242331
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: InGameObject
+    uniqueID: 2679458701
+    locked: 0
+  - name: Player
+    uniqueID: 2618127825
+    locked: 0
