@@ -1,0 +1,50 @@
+###
+# Unity folders and files
+###
+[Aa]ssets/AssetStoreTools*
+[Bb]uild/
+[Ll]ibrary/
+[Ll]ocal[Cc]ache/
+[Oo]bj/
+[Tt]emp/
+[Uu]nityGenerated/
+# file on crash reports
+sysinfo.txt
+# Unity3D generated meta files
+*.pidb.meta
+
+###
+# VS/MD solution and project files
+###
+[Ee]xportedObj/
+*.booproj
+*.csproj
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pidb
+.DS_Store
+
+###
+# OS generated
+###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+TurtleGame/.vs/TurtleGame/v16/Server/sqlite3/db.lock
+TurtleGame/Library/SourceAssetDB
+TurtleGame/Library/ShaderCache/EditorEncounteredVariants
+TurtleGame/Library/SceneVisibilityState.asset
+TurtleGame/Library/ArtifactDB
+TurtleGame/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json
+TurtleGame/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json
+TurtleGame/Library/LastSceneManagerSetup.txt
+TurtleGame/Library/CurrentLayout-default.dwlt
