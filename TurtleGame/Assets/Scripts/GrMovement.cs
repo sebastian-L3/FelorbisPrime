@@ -7,13 +7,13 @@ public class GrMovement : GeneralMovement
     protected float slowingSwim = 1.5f;
 
     protected float mineThrowSpeed = 20f;
-    protected float mineSpeed = 40f;
+    protected float mineSpeed = 50f;
 
-    protected float mineJumpTime = 2f;
+    protected float mineJumpTime = 0.1f;
     [SerializeField]
     protected float mineJumpTimeCounter = 0f;
 
-    protected float mineThrowBuffer = 0.2f;
+    protected float mineThrowBuffer = 0.05f;
     [SerializeField]
     protected float mineThrowBufferCounter = 0f;
 
@@ -51,6 +51,7 @@ public class GrMovement : GeneralMovement
         jumpLimit = 2;
         slowingSwim = 1.5f;
         slowingAir = 0.75f;
+        jumpForce = 25f;
     }
 
     // Update is called once per frame
@@ -144,9 +145,8 @@ public class GrMovement : GeneralMovement
                 //if (xDist > mineXDist || xDist < -mineXDist) xDist = 0;
                 isExploding = true;
                 mineJumpTimeCounter = mineJumpTime;
-                mineThrowBCooldownCounter = mineThrowCooldown;
-
             }
+            mineThrowBCooldownCounter = mineThrowCooldown;
             mineAn.SetTrigger("isExploding");
             rbMines.simulated = false;
             MinesObject.SetActive(false);

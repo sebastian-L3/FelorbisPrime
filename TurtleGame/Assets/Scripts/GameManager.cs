@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         turtleShellIImg.sprite = turtleShellOnSprite;
-        turtleBar.setMaxValue(TurtleScript.slideDashCooldown);
+        turtleBar.setMaxValue(1);
         turtleBar.setValueToMax();
-        tigerBar.setMaxValue(TurtleScript.slideDashCooldown);
+        tigerBar.setMaxValue(1);
         tigerBar.setValueToMax();
     }
 
@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         checkSkill();
-        turtleBar.replaceValue(TurtleScript.slideDashCooldown - TurtleScript.slideDashCooldownCounter);
-        tigerBar.replaceValue(TurtleScript.slideDashCooldown - TigerScript.mineThrowBCooldownCounter);
+        turtleBar.replaceValue(1 - TurtleScript.slideDashCooldownCounter/TurtleScript.slideDashCooldown);
+        tigerBar.replaceValue(1 - TigerScript.mineThrowBCooldownCounter/ TurtleScript.slideDashCooldown);
     }
 
     private void checkSkill()
