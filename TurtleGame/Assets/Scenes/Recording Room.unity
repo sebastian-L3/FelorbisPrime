@@ -441,6 +441,7 @@ MonoBehaviour:
   currentCharacter: {fileID: 206811926}
   CM: {fileID: 0}
   manager: {fileID: 0}
+  AnBG: {fileID: 0}
   gravity: 0
   facingR: 1
   crouch: 0
@@ -501,6 +502,9 @@ MonoBehaviour:
   isOnShellJump: 0
   isOnMines: 0
   isOnShell: 0
+  isOnBGBlue: 0
+  isOnBGWhite: 0
+  isOnBGYellow: 0
   groundCheck: {fileID: 2024878856}
   HeadCheck: {fileID: 1216953010}
   BodyCheck: {fileID: 1148266154}
@@ -535,6 +539,15 @@ MonoBehaviour:
   whatIsShellBox:
     serializedVersion: 2
     m_Bits: 131072
+  whatIsBGBlue:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsBGWhite:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsBGYellow:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &206811931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,7 +1163,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1723966812}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -180, y: 180, z: 1430.917}
+  m_LocalEulerAnglesHint: {x: -180, y: 180, z: 1430.916}
 --- !u!1 &524227259
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,9 +4805,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1676839471
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c6eb65af22a4504780d94b8d48fb725, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4802,7 +4815,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1960261244
