@@ -21,7 +21,11 @@ public class GeneralEnviroment : MonoBehaviour
 
     public bool isOnMines;
     public bool isOnShell;
-    
+
+    public bool isOnBGBlue;
+    public bool isOnBGWhite;
+    public bool isOnBGYellow;
+
     //checkers
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected Transform HeadCheck;
@@ -49,6 +53,9 @@ public class GeneralEnviroment : MonoBehaviour
     [SerializeField] protected LayerMask whatIsSwitchHouse;
     [SerializeField] protected LayerMask whatIsPlayer;
     [SerializeField] protected LayerMask whatIsShellBox;
+    [SerializeField] protected LayerMask whatIsBGBlue;
+    [SerializeField] protected LayerMask whatIsBGWhite;
+    [SerializeField] protected LayerMask whatIsBGYellow;
 
 
 

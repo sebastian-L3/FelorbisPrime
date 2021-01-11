@@ -60,6 +60,7 @@ public class GrMovement : GeneralMovement
         if (!manager.getIsDialogueOn())
         {
             envi.CheckSurroundings();
+            ChangeBGColor();
             CheckInput();
             EnviromentalEffects();
             specificChecks();

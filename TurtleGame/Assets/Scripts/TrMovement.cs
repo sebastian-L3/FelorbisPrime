@@ -63,6 +63,7 @@ public class TrMovement : GeneralMovement
         if (!manager.getIsDialogueOn())
         {
             envi.CheckSurroundings();
+            ChangeBGColor();
             CheckInput();
             EnviromentalEffects();
             specificChecks();

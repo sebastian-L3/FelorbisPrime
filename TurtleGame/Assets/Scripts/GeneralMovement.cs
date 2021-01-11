@@ -23,6 +23,8 @@ public class GeneralMovement : MonoBehaviour
     protected CinemachineVirtualCamera CM;
     [SerializeField]
     protected GameManager manager;
+    [SerializeField]
+    protected Animator AnBG;
 
 
 
@@ -116,6 +118,7 @@ public class GeneralMovement : MonoBehaviour
         if (!manager.getIsDialogueOn())
         {
             envi.CheckSurroundings();
+            ChangeBGColor();
             CheckInput();
             EnviromentalEffects();
             Move();
@@ -134,6 +137,27 @@ public class GeneralMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ChangeBGColor()
+    {
+        if (envi.isOnBGBlue)
+        {
+            AnBG.SetBool("IsBlue",true);
+            AnBG.SetBool("IsWhite", false);
+            AnBG.SetBool("IsYellow", false);
+        }else if (envi.isOnBGWhite)
+        {
+            AnBG.SetBool("IsBlue", false);
+            AnBG.SetBool("IsWhite", true);
+            AnBG.SetBool("IsYellow", false);
+        }else if (envi.isOnBGYellow)
+        {
+            AnBG.SetBool("IsBlue", false);
+            AnBG.SetBool("IsWhite", false);
+            AnBG.SetBool("IsYellow", true);
+        }
+
     }
 
     public void CheckInput()

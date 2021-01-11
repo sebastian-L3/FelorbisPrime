@@ -20,6 +20,10 @@ public class GrEnviroment : GeneralEnviroment
         isOnSwitchHouse = Physics2D.OverlapCircle(BodyCheck.position, bodyCheckRadius, whatIsSwitchHouse);
         isOnShellJump = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsShellBox);
 
+        isOnBGBlue = Physics2D.OverlapCircle(BodyCheck.position, bodyCheckRadius, whatIsBGBlue);
+        isOnBGWhite = Physics2D.OverlapCircle(BodyCheck.position, bodyCheckRadius, whatIsBGWhite);
+        isOnBGYellow = Physics2D.OverlapCircle(BodyCheck.position, bodyCheckRadius, whatIsBGYellow);
+
         isOnMines = Physics2D.OverlapCircle(SkillObject.position, explosionRadius, whatIsPlayer);
     }
 
