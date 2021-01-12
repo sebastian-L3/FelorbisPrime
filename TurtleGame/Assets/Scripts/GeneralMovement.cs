@@ -383,7 +383,6 @@ public class GeneralMovement : MonoBehaviour
             //JUMP
             if (jumpTimeCounter > 0) { jumpTimeCounter -= Time.deltaTime; }
 
-
             if (Input.GetButton("Jump"))
             {
                 if (!isJumping && canJump)
@@ -395,21 +394,22 @@ public class GeneralMovement : MonoBehaviour
                 }
                 if (jumpTimeCounter > 0 && isJumping)
                 {
-
+                    //Debug.Log("jumpTime>0");
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce * (1 + jumpTime - jumpTimeCounter));
                 }
                 if (jumpTimeCounter <= 0 && isJumping && jumpleftDecreaseStopper)
                 {
-
+                    Debug.Log("jumpTime<0");
                     jumpleftDecreaseStopper = false;
                     jumpLeft--;
                     jumpTimeCounter = 0;
                 }
             }
-            else if (Input.GetButtonUp("Jump") && jumpButtonPressed)
+            if (!Input.GetButton("Jump")) { Debug.Log("JLDstopper: "+ jumpleftDecreaseStopper + " JBPressed:" + jumpButtonPressed + " JumpLeft:" + jumpLeft); }
+            if (!Input.GetButton("Jump") && jumpButtonPressed)
             {
+                Debug.Log("jumpBUp");
                 jumpButtonPressed = false;
-
                 isJumping = false;
                 if (jumpleftDecreaseStopper)
                 {

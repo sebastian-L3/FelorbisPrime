@@ -47,6 +47,8 @@ public class TrMovement : GeneralMovement
     protected int summonAmmoMax = 1;
     public int summonAmmoCount = 1;
 
+    public float time=1;
+
 
     protected override void Start()
     {
@@ -55,6 +57,8 @@ public class TrMovement : GeneralMovement
 
         //value
         gravity = rb.gravityScale;
+        Time.timeScale = time;
+        
     }
 
     // Update is called once per frame
