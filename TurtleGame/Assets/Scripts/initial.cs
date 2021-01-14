@@ -18,13 +18,6 @@ public class initial : MonoBehaviour
         Canvas = GameObject.FindWithTag("UI");
         Music = GameObject.FindWithTag("Music");
         EVS = GameObject.FindWithTag("EventSystem");
-
-        DontDestroyOnLoad(Canvas);
-        DontDestroyOnLoad(Music);
-        DontDestroyOnLoad(EVS);
-
-        DontDestroyOnLoad(this.gameObject);
-
         //currentScene = SceneManager.GetActiveScene();
         //cSceneName = currentScene.name;
 

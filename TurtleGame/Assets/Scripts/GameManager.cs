@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         checkSkill();
         turtleBar.replaceValue(1 - TurtleScript.slideDashCooldownCounter/TurtleScript.slideDashCooldown);
-        tigerBar.replaceValue(1 - TigerScript.mineThrowBCooldownCounter/ TurtleScript.slideDashCooldown);
+        tigerBar.replaceValue(1 - TigerScript.mineThrowBCooldownCounter/ TigerScript.mineThrowCooldown);
     }
 
     private void checkSkill()
