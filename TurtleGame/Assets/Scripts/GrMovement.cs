@@ -13,7 +13,7 @@ public class GrMovement : GeneralMovement
     [SerializeField]
     protected float mineJumpTimeCounter = 0f;
 
-    protected float mineThrowBuffer = 0.05f;
+    protected float mineThrowBuffer = 0.25f;
     [SerializeField]
     protected float mineThrowBufferCounter = 0f;
 
@@ -111,11 +111,12 @@ public class GrMovement : GeneralMovement
     public override void RefreshOrb()
     {
         skillAmmoCount = skillAmmoMax;
+        AM.play("refresh");
     }
 
     void mines()
     {
-        if(!MinesObject.activeSelf && Input.GetButtonDown("Skill 1") && mineThrowBufferCounter<=0 && skillAmmoCount>0 && mineThrowBCooldownCounter<=0)
+        if(!MinesObject.activeSelf && Input.GetButton("Skill 1") && mineThrowBufferCounter<=0 && skillAmmoCount>0 && mineThrowBCooldownCounter<=0)
         {
             MinesParentObject.transform.position = envi.FirePoint.position;
             float faceVar = 1;
@@ -126,7 +127,7 @@ public class GrMovement : GeneralMovement
             mineThrowBufferCounter = mineThrowBuffer;
             skillAmmoCount--;
         }
-        else if (Input.GetButtonDown("Skill 1") && mineThrowBufferCounter <= 0 && MinesObject.activeSelf)
+        else if (Input.GetButton("Skill 1") && mineThrowBufferCounter <= 0 && MinesObject.activeSelf)
         {
             if (envi.isOnMines)
             {
@@ -149,6 +150,7 @@ public class GrMovement : GeneralMovement
             }
             mineThrowBCooldownCounter = mineThrowCooldown;
             mineAn.SetTrigger("isExploding");
+            AM.play("explosion");
             rbMines.simulated = false;
             MinesObject.SetActive(false);
             mineThrowBufferCounter = mineThrowBuffer;

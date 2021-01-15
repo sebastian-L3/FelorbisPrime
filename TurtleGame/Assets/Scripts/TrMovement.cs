@@ -97,12 +97,34 @@ public class TrMovement : GeneralMovement
         if (envi.isSpring)
         {
             springTimeCounter = springTime;
+            AM.play("spring");
         }
         if (springTimeCounter > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
             springTimeCounter -= Time.deltaTime;
-            if(!isSliding)anScript.AnimationSet("Jump");
+            if (!(slideTimeCounter > 0))
+            {
+                Debug.Log("SpringEffectANJUMP");
+                anScript.AnimationSet("Jump");
+            }
+        }
+    }
+
+    protected override void ShellBoxEffect()
+    {
+        if (envi.isOnShellJump)
+        {
+            springTimeCounter = springTime;
+        }
+        if (springTimeCounter > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * shellMultiplier);
+            springTimeCounter -= Time.deltaTime;
+            if (!(slideTimeCounter > 0))
+            {
+                anScript.AnimationSet("Jump");
+            }
         }
     }
 
@@ -131,6 +153,7 @@ public class TrMovement : GeneralMovement
     public override void RefreshOrb()
     {
         summonAmmoCount = summonAmmoMax;
+        AM.play("refresh");
     }
 
     void specificMovements()
@@ -147,6 +170,7 @@ public class TrMovement : GeneralMovement
         {
             if (!isSliding && ShellOnBack.activeSelf)
             {
+                AM.play("dash");
                 isSliding = true;
                 slideTimeCounter = slideTime;
                 facingSlide = facingR;
@@ -158,7 +182,6 @@ public class TrMovement : GeneralMovement
         }
         if (isSliding)
         {
-            Debug.Log("Sloding" + " " + crouchEnableCollider.enabled + " / " + " " + crouchDisableCollider.enabled);
             if (crouchDisableCollider != null) crouchDisableCollider.enabled = false;
             if (crouchEnableCollider != null) crouchEnableCollider.enabled = true;
             crouch = true;
@@ -167,14 +190,14 @@ public class TrMovement : GeneralMovement
 
             rb.velocity = new Vector2(tMoveSpeed, rb.velocity.y);
             slideTimeCounter -= Time.deltaTime;
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButton("Jump"))
             {
                 slideTimeCounter = 0;
             }
         }
         if (slideTimeCounter <= 0 && isSliding)
         {
-            Debug.Log("Slodi time up");
+
             isSliding = false;
             anScript.AnimationSet("SlidingCancel");
             slideDecayCounter = slideDecay;
@@ -186,7 +209,7 @@ public class TrMovement : GeneralMovement
         }
         if (slideDecayCounter > 0)
         {
-            Debug.Log("SlideDecay");
+
             if (rb.velocity.x == 0)
             {
 

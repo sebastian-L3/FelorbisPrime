@@ -25,6 +25,8 @@ public class GeneralMovement : MonoBehaviour
     protected GameManager manager;
     [SerializeField]
     protected Animator AnBG;
+    [SerializeField]
+    protected AudioManager AM;
 
 
 
@@ -283,6 +285,7 @@ public class GeneralMovement : MonoBehaviour
         if (envi.isSpring)
         {
             springTimeCounter = springTime;
+            AM.play("spring");
         }
         if (springTimeCounter > 0)
         {
@@ -311,11 +314,12 @@ public class GeneralMovement : MonoBehaviour
         if (houseInteractBuffer > 0) houseInteractBuffer -= Time.deltaTime;
         if (envi.isOnSwitchHouse)
         {
-
             if (Input.GetButtonDown("Interact") && houseInteractBuffer<=0)
             {
                 Debug.Log("interact");
+                AM.play("switchHouse");
                 otherCharacter.transform.position = transform.position;
+                otherCharacter.transform.position = new Vector2(otherCharacter.transform.position.x, otherCharacter.transform.position.y + 2f);
                 CM.Follow = otherCharacter.transform;
                 otherCharacter.SetActive(true);
                 currentCharacter.SetActive(false);
@@ -399,16 +403,14 @@ public class GeneralMovement : MonoBehaviour
                 }
                 if (jumpTimeCounter <= 0 && isJumping && jumpleftDecreaseStopper)
                 {
-                    Debug.Log("jumpTime<0");
                     jumpleftDecreaseStopper = false;
                     jumpLeft--;
                     jumpTimeCounter = 0;
                 }
             }
-            if (!Input.GetButton("Jump")) { Debug.Log("JLDstopper: "+ jumpleftDecreaseStopper + " JBPressed:" + jumpButtonPressed + " JumpLeft:" + jumpLeft); }
             if (!Input.GetButton("Jump") && jumpButtonPressed)
             {
-                Debug.Log("jumpBUp");
+
                 jumpButtonPressed = false;
                 isJumping = false;
                 if (jumpleftDecreaseStopper)

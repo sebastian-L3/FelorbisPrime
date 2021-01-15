@@ -8,7 +8,7 @@ public class ChangeSongText : MonoBehaviour
     public AudioClip[] Aclips;
     public string[] Nclips;
     public Text Text;
-    private AudioSource audiosource;
+    public AudioSource audiosource;
     int randomNumber = 0;
     public float timer = 1f;
 
@@ -17,7 +17,7 @@ public class ChangeSongText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audiosource = FindObjectOfType<AudioSource>();
+        audiosource = GetComponent<AudioSource>();
         audiosource.loop = false;
         an = GetComponent<Animator>();
     }
@@ -32,13 +32,15 @@ public class ChangeSongText : MonoBehaviour
     {
         if (!audiosource.isPlaying && timer<=0)
         {
+            Debug.Log("If ENtered SOng");
             GetRandom();
             audiosource.clip = Aclips[randomNumber];
             Text.text = "Playing " + Nclips[randomNumber];
+            Debug.Log("If ENtered SOng1 " + audiosource.clip + " " + Text.text);
             audiosource.Play();
             timer = 5f;
             an.SetTrigger("spawn");
-
+            Debug.Log("If ENtered SOng2");
         }
         if (timer > 0)
         {

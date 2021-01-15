@@ -3508,7 +3508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132045323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -208, y: 387.30002, z: -10}
+  m_LocalPosition: {x: -38.500008, y: 497.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 633498390}
@@ -14399,6 +14399,7 @@ MonoBehaviour:
   - Tech Mime
   - Wandering Lantern
   Text: {fileID: 18009279}
+  audiosource: {fileID: 580849116}
   timer: 1
 --- !u!82 &580849116
 AudioSource:
@@ -29273,7 +29274,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30211c3462eaab6439fd2f64e6be06ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: explosion
+    clip: {fileID: 8300000, guid: b4cf1bcbcd9b7c449882519f2337d141, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: spring
+    clip: {fileID: 8300000, guid: 612e29f6cb58dc74db019e9cf1c0e954, type: 3}
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - name: dash
+    clip: {fileID: 8300000, guid: 0e78de3a91819db47989d819de32e6a9, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: switchHouse
+    clip: {fileID: 8300000, guid: ed0a96fefc5852c4586724b545d4d018, type: 3}
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - name: refresh
+    clip: {fileID: 8300000, guid: 7356fe25382f75041a7ba3f7acc1a42b, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: Crow
+    clip: {fileID: 8300000, guid: 087e1a7d8ba7a0942bca9ab408b8c30f, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: jump
+    clip: {fileID: 8300000, guid: c6f940a0ed802fa46b03454a9c90bc91, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: Timer
+    clip: {fileID: 8300000, guid: 77b0a4e53c8578448b3562e42bf59559, type: 3}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    loop: 0
+    volume: 0
+    source: {fileID: 0}
 --- !u!1 &1255167883
 GameObject:
   m_ObjectHideFlags: 0
@@ -42284,7 +42335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798430956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -208, y: 387.30002, z: -10}
+  m_LocalPosition: {x: -38.500008, y: 497.7, z: -10}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.05}
   m_Children:
   - {fileID: 1494838802}
@@ -49831,6 +49882,7 @@ MonoBehaviour:
   CM: {fileID: 132045324}
   manager: {fileID: 562105939}
   AnBG: {fileID: 1798430964}
+  AM: {fileID: 1248578995}
   gravity: 10
   facingR: 1
   crouch: 0
@@ -50539,6 +50591,7 @@ MonoBehaviour:
   CM: {fileID: 132045324}
   manager: {fileID: 562105939}
   AnBG: {fileID: 1798430964}
+  AM: {fileID: 1248578995}
   gravity: 0
   facingR: 1
   crouch: 0
@@ -51645,7 +51698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2342457100665447637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -208, y: 360, z: 0}
+  m_LocalPosition: {x: -38.5, y: 470.4, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 113706986}
