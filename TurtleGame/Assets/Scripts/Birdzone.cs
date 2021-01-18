@@ -13,7 +13,7 @@ public class Birdzone : MonoBehaviour
     public GameObject player2;
     public bool isTurtle=false;
     public float checkerRadius;
-    AudioManager AM;
+    public AudioManager AM;
     // Start is called before the first frame update
     void Start()
     {
