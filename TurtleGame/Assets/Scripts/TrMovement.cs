@@ -15,8 +15,10 @@ public class TrMovement : GeneralMovement
     protected float slideDecayCounter;
 
     protected float shellThrowBuffer = 0.2f;
+    protected float shellSlideBuffer = 0.5f;
     [SerializeField]
     protected float shellThrowBufferCounter = 0f;
+    protected float shellSlideBufferCounter = 0f;
     protected float shellSummon = 1f;
     [SerializeField]
     protected float shellSummonCounter = 0f;
@@ -165,7 +167,7 @@ public class TrMovement : GeneralMovement
     void slideDash()
     {
         if (slideDashCooldownCounter > 0) slideDashCooldownCounter -= Time.deltaTime;
-
+        if (shellSlideBufferCounter > 0) shellSlideBufferCounter -= Time.deltaTime;
         if (Input.GetButton("Skill 1") && slideDashCooldownCounter<=0)
         {
             if (!isSliding && ShellOnBack.activeSelf)
@@ -173,6 +175,7 @@ public class TrMovement : GeneralMovement
                 AM.play("dash");
                 isSliding = true;
                 slideTimeCounter = slideTime;
+                shellSlideBufferCounter = shellSlideBuffer;
                 facingSlide = facingR;
                 if (crouchDisableCollider != null) crouchDisableCollider.enabled = false;
                 if (crouchEnableCollider != null) crouchEnableCollider.enabled = true;
@@ -190,7 +193,7 @@ public class TrMovement : GeneralMovement
 
             rb.velocity = new Vector2(tMoveSpeed, rb.velocity.y);
             slideTimeCounter -= Time.deltaTime;
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && shellSlideBufferCounter<=0)
             {
                 slideTimeCounter = 0;
             }
