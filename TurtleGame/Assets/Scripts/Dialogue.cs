@@ -18,7 +18,7 @@ public class Dialogue
     {
         this.name = name;
         this.dialogueText = dialogueText;
-        delayTime = 0.1f;
+        delayTime = 0.05f;
         isDialogueFinish = true;
 
 

@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     private Dialogue dialogueNow;
     private string textNow;
     private int idxDialogue;
-
+    private bool isCharTalking;
     [SerializeField]
     private TextMeshProUGUI textUI;
     [SerializeField]
@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         initializeDialogues();
-        startDialogue("Contoh");
+        //startDialogue("Introduction", false);
     }
 
     // Update is called once per frame
@@ -50,20 +50,50 @@ public class DialogueManager : MonoBehaviour
         string name;
         Sentence[] dialogueText;
 
-        name = "Contoh";
+        name = "Introduction";
         dialogueText = new Sentence[]
         {
-            new Sentence("Halo semuanya", "Turtle"),
-            new Sentence("Kami kembali lagi", "Tiger"),
-            new Sentence("di pertemuan ini", "Turtle"),
+            new Sentence("Welcome to Felorbis", null),
+            new Sentence("My name is Turtle", null),
+            new Sentence("And i will climb the Mountain", null),
+            new Sentence("Let's Go", null),
+        };
+        dialogues.Add(new Dialogue(name, dialogueText));
+
+        name = "Tiger";
+        dialogueText = new Sentence[]
+        {
+            new Sentence("Oh, Hi Tiger!", "Turtle"),
+            new Sentence("Are you climbing the Mountain too?", "Turtle"),
+            new Sentence("Yeah! What are you doing here?", "Tiger"),
+            new Sentence("Of course I'm climbing the Mountain too.", "Turtle"),
+            new Sentence("Oh are you sure?", "Tiger"),
+            new Sentence("I doubt a turtle can climb a mountain this high!", "Tiger"),
+            new Sentence("Well.. if you insist I can help you climb this one!", "Tiger"),
+            new Sentence("Sure, Thanks Tiger!", "Turtle"),
+            new Sentence("Let's go to the house!", "Tiger"),
         };
 
         dialogues.Add(new Dialogue(name, dialogueText));
 
+        name = "TigerWater";
+        dialogueText = new Sentence[]
+        {
+            new Sentence("Uh, water I hate it!", "Tiger"),
+            new Sentence("What's wrong Tiger?", "Turtle"),
+            new Sentence("Uh the truth is i can't swim turtle", "Tiger"),
+            new Sentence("Ah at this rate i won't be able to climb the Mountain!", "Tiger"),
+            new Sentence("I can help you Tiger!", "Turtle"),
+            new Sentence("You can ride on my shell", "Turtle"),
+            new Sentence("Hmmmmm okay then", "Tiger"),
+            new Sentence("Let's get going!", "Turtle"),
+        };
+
+        dialogues.Add(new Dialogue(name, dialogueText));
 
     }
 
-    public void startDialogue(string name)
+    public void startDialogue(string name, bool charTalking)
     {
         //kasih info ke gamemanager udh nyala
         manager.setIsDialogueOn(true);
@@ -76,9 +106,12 @@ public class DialogueManager : MonoBehaviour
         //kasih boolean di input
 
         //start dialogue
+        idxDialogue = 0;
         dialogueNow = dialogues.Find(item => item.name == name);
         isChar_1Showing = false;
         whoIsTalkingNow = "";
+        isCharTalking = charTalking;
+        textNow = "";
         nextSentence();
     }
 
@@ -90,6 +123,7 @@ public class DialogueManager : MonoBehaviour
         //akhiri dialogue yg skrg dialogueNow
         textNow = "";
         dialogueCanvas.gameObject.SetActive(false);
+
     }
 
     public void nextSentence()
@@ -117,20 +151,28 @@ public class DialogueManager : MonoBehaviour
 
     private void handleImageSprite()
     {
-        SpriteCharacter spriteNow = characterSprites.Find(character => character.name == whoIsTalkingNow);
-
-
-        if (isChar_1Showing)
+        if (isCharTalking)
         {
-            char_1.sprite = spriteNow.sprite;
-            char_1.gameObject.SetActive(true);
-            char_2.gameObject.SetActive(false);
+            SpriteCharacter spriteNow = characterSprites.Find(character => character.name == whoIsTalkingNow);
+
+
+            if (isChar_1Showing)
+            {
+                char_1.sprite = spriteNow.sprite;
+                char_1.gameObject.SetActive(true);
+                char_2.gameObject.SetActive(false);
+            }
+            else
+            {
+                char_2.sprite = spriteNow.sprite;
+                char_2.gameObject.SetActive(true);
+                char_1.gameObject.SetActive(false);
+            }
         }
         else
         {
-            char_2.sprite = spriteNow.sprite;
-            char_2.gameObject.SetActive(true);
             char_1.gameObject.SetActive(false);
+            char_2.gameObject.SetActive(false);
         }
     }
 

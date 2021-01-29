@@ -66,17 +66,30 @@ public class TrMovement : GeneralMovement
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!manager.getIsDialogueOn())
-        {
+        
+        
             envi.CheckSurroundings();
             ChangeBGColor();
-            CheckInput();
+            if (!manager.getIsDialogueOn())
+            {
+                CheckInput();
+
+            }
+            else
+            {
+                tMoveSpeed = 0f;
+                movementInputDirection = 0f;
+                anScript.AnimationSet("WalkFalse");
+            }
+                
             EnviromentalEffects();
             specificChecks();
             Move();
             specificMovements();
-        }
+        
     }
+
+
 
     void specificChecks()
     {

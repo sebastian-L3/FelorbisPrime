@@ -43,6 +43,7 @@ public class GrMovement : GeneralMovement
     [SerializeField]
     protected Animator mineAn;
 
+    bool isDoingFlip = false;
     protected override void Start()
     {
         envi = GetComponent<GrEnviroment>();
@@ -57,16 +58,33 @@ public class GrMovement : GeneralMovement
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!manager.getIsDialogueOn())
-        {
+        
+        
             envi.CheckSurroundings();
             ChangeBGColor();
+        if (!manager.getIsDialogueOn())
+        {
             CheckInput();
+
+        }
+        else
+        {
+            tMoveSpeed = 0f;
+            movementInputDirection = 0f;
+            anScript.AnimationSet("WalkFalse");
+            if (!isDoingFlip)
+            {
+                Flip();
+                isDoingFlip = true;
+            }
+            
+            
+        }
             EnviromentalEffects();
             specificChecks();
             Move();
             specificMovements();
-        }
+        
     }
 
     void specificChecks()

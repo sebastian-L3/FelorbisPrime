@@ -47,7 +47,7 @@ public class GeneralMovement : MonoBehaviour
     protected float shellMultiplier = 1.75f;
 
     //temporary value
-    private float movementInputDirection;
+    protected float movementInputDirection;
     [SerializeField]
     protected float gravity;
 
@@ -117,14 +117,16 @@ public class GeneralMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!manager.getIsDialogueOn())
-        {
+       
             envi.CheckSurroundings();
             ChangeBGColor();
-            CheckInput();
-            EnviromentalEffects();
-            Move();
-        }
+            if (!manager.getIsDialogueOn())
+            {
+                CheckInput();
+            }else;
+            
+            
+        
     }
 
     private void dialogueHandler()
@@ -435,7 +437,7 @@ public class GeneralMovement : MonoBehaviour
             Debug.Log(crouchDisableCollider.enabled + " " + crouchEnableCollider.enabled);
         }
 
-        void Flip()
+        protected void Flip()
         {
             facingR = !facingR;
             transform.Rotate(0f, 180f, 0f);
