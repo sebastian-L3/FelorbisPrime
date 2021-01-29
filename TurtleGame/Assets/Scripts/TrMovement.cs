@@ -15,7 +15,7 @@ public class TrMovement : GeneralMovement
     protected float slideDecayCounter;
 
     protected float shellThrowBuffer = 0.2f;
-    protected float shellSlideBuffer = 0.25f;
+    protected float shellSlideBuffer = 0.4f;
     [SerializeField]
     protected float shellThrowBufferCounter = 0f;
     [SerializeField]
@@ -74,7 +74,6 @@ public class TrMovement : GeneralMovement
             if (!manager.getIsDialogueOn())
             {
                 CheckInput();
-
             }
             else
             {
