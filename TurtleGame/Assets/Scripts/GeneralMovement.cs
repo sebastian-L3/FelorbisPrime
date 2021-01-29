@@ -203,7 +203,7 @@ public class GeneralMovement : MonoBehaviour
         airslow();
     }
 
-    void jumpEffect()
+    protected virtual void jumpEffect()
     {
         //falling faster
         if (rb.velocity.y < 0)

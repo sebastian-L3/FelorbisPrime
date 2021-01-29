@@ -15,9 +15,10 @@ public class TrMovement : GeneralMovement
     protected float slideDecayCounter;
 
     protected float shellThrowBuffer = 0.2f;
-    protected float shellSlideBuffer = 0.5f;
+    protected float shellSlideBuffer = 0.25f;
     [SerializeField]
     protected float shellThrowBufferCounter = 0f;
+    [SerializeField]
     protected float shellSlideBufferCounter = 0f;
     protected float shellSummon = 1f;
     [SerializeField]
@@ -104,6 +105,40 @@ public class TrMovement : GeneralMovement
             {
                 facingSlide = !facingSlide;
             }
+        }
+    }
+
+    protected override void jumpEffect()
+    {
+        //falling faster
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * rb.gravityScale * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (!Input.GetButton("Jump") && rb.velocity.y > 0)
+        {
+            rb.velocity += Vector2.up * rb.gravityScale * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+
+        if (envi.isGrounded && !envi.isFloating)
+        {
+            if (!Input.GetButton("Jump"))
+            {
+                jumpLeft = jumpLimit;
+                isJumping = false;
+            }
+            if (jumpTimeCounter < jumpTime - 0.05f) anScript.AnimationSet("Landed");
+            swimAnimationStop = true;
+
+        }
+        if (jumpLeft <= 0 || crouch || shellSlideBufferCounter>0)
+        {
+            canJump = false;
+        }
+        else
+        {
+            canJump = true;
         }
     }
 
