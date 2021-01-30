@@ -24,6 +24,16 @@ public class Dialogue
 
     }
 
+    public Dialogue(string name, Sentence[] dialogueText, float delay)
+    {
+        this.name = name;
+        this.dialogueText = dialogueText;
+        delayTime = delay;
+        isDialogueFinish = true;
+
+
+    }
+
 
 
 

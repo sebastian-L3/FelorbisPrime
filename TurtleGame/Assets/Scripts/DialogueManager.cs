@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         initializeDialogues();
-        //startDialogue("Introduction", false);
+        startDialogue("Introduction", false);
     }
 
     // Update is called once per frame
@@ -90,6 +90,29 @@ public class DialogueManager : MonoBehaviour
         };
 
         dialogues.Add(new Dialogue(name, dialogueText));
+
+        name = "Eagle";
+        dialogueText = new Sentence[]
+        {
+            new Sentence("What was that?", "Turtle"),
+            new Sentence("WACKK!!", "Eagle"),
+        };
+
+        dialogues.Add(new Dialogue(name, dialogueText, 0.02f));
+
+        name = "Ending";
+        dialogueText = new Sentence[]
+        {
+            new Sentence("Wow, we finally made it!", "Turtle"),
+            new Sentence("Meh it's kinda easy", "Tiger"),
+            new Sentence("It was worth the effort.", "Turtle"),
+            new Sentence("Yeah.. I guess", "Tiger"),
+            new Sentence("Well..", "Turtle"),
+            new Sentence("For now..", "Turtle"),
+            new Sentence("Let's enjoy the view!", "Turtle"),
+        };
+
+        dialogues.Add(new Dialogue(name, dialogueText, 0.1f));
 
     }
 

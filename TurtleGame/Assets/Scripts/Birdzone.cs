@@ -14,6 +14,10 @@ public class Birdzone : MonoBehaviour
     public bool isTurtle=false;
     public float checkerRadius;
     public AudioManager AM;
+
+    private float timer = 0f;
+    private bool isTimer = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +36,7 @@ public class Birdzone : MonoBehaviour
         }
         if (enterBirdzone)
         {
-            AM.play("Crow");
+            if(isTimer)AM.play("Crow");
             bird.SetActive(true);
             if (isTurtle) birdScript.player = player1;
             else birdScript.player = player2;
@@ -40,6 +44,16 @@ public class Birdzone : MonoBehaviour
         else
         {
             birdScript.reachedHome = false;
+        }
+        if(timer > 0f)
+        {
+            timer -= Time.deltaTime;
+            isTimer = false;
+            
+        }else
+        {
+            isTimer = true;
+            timer = 5f;
         }
     }
 
